@@ -1,0 +1,82 @@
+body { font-family: sans-serif;
+     background: #f4f0e6;
+      text-align: center;
+       margin: 0; }
+
+
+
+
+
+
+.section-title { background: #331111; color: #fff; padding: 10px; margin: 0; }
+.item {
+    background: #e5d3c0;
+    margin: 15px auto;
+    padding: 15px;
+    width: 95%;        /* رفعنا النسبة لتملأ الشاشة أكثر */
+    max-width: 900px;  /* زيادة المساحة المسموح بها لتناسب الجوالات الكبيرة */
+    display: flex;
+    align-items: center;
+    gap: 15px;         /* مسافة مريحة بين الصورة والنص */
+    border-radius: 15px;
+}
+
+.item img {
+    width: 120px;      /* تكبير الصورة لتكون واضحة */
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;    /* منع انكماش الصورة */
+}
+
+.info {
+    flex-grow: 1;      /* جعل النص يأخذ المساحة المتبقية */
+    text-align: right;
+}
+#cart-float { position: fixed; bottom: 20px; right: 20px; background: #7a2626; color: white; padding: 15px 25px; border-radius: 50px; cursor: pointer; }
+.hidden { display: none; }
+#cart-modal { position: fixed; bottom: 80px; right: 20px; background: white; padding: 20px; width: 300px; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.3); }
+/* تنسيق صورة الهيدر */
+.header-img {
+    width: 100%;        /* تجعلها بعرض الشاشة بالكامل */
+    height: 300px;      /* ارتفاع الصورة (يمكنك تكبيره أو تصغيره) */
+    object-fit: cover;  /* تضمن أن الصورة لا تظهر بشكل مضغوط أو مشوه */
+    display: block;
+}
+
+/* تنسيق الـ Hero ليكون مرتباً */
+.hero {
+    background: #331111; 
+    padding: 0;         /* نشيل الـ padding عشان الصورة تطلع للأطراف */
+    text-align: center;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background-color: #bfae96; /* لون خلفية الأزرار */
+    position: sticky;          /* عشان يثبت الشريط فوق */
+    top: 0;
+    z-index: 100;
+}
+
+.categories a {
+    background-color: #2a0f02; /* لون الزر نفسه */
+    color: white;              /* لون الكلام */
+    padding: 10px 20px;
+    border-radius: 20px;       /* شكل دائري */
+    text-decoration: none;
+    font-weight: bold;
+}
+button {
+    font-size: 25px;      /* تكبير علامة (+) */
+    padding: 5px 15px;    /* زيادة حجم الزر */
+    border-radius: 8px;   /* جعل الحواف دائرية */
+    cursor: pointer;
+    background-color: #3a1503; /* لون الخلفية */
+    border: 1px solid #7a2626; /* حدود الزر */
+outline: none;
+box-shadow: none;
+}
